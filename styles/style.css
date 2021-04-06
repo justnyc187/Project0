@@ -1,0 +1,18 @@
+h2 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+  }
+  
+  .window{
+    padding: 50px;
+    border: 10px solid lightblue;
+    color: teal;
+    border-radius: 20px;
+  }
+  section {
+    background: lightblue;
+    margin: 0px 350px 0px 350px
+  }
