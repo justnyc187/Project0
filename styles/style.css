@@ -6,6 +6,9 @@ h2 {
     text-align: center;
     
   }
+  h4 {
+    color: teal;
+  }
   
   .window{
     padding: 50px;
