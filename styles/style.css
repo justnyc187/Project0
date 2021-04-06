@@ -4,6 +4,7 @@ h2 {
   
   p {
     text-align: center;
+    
   }
   
   .window{
@@ -11,8 +12,17 @@ h2 {
     border: 10px solid lightblue;
     color: teal;
     border-radius: 20px;
+    
   }
   section {
     background: lightblue;
-    margin: 0px 350px 0px 350px
+    position: relative;
+    margin: 10px 350px 0px 400px;
+    cursor: pointer;
+  }
+  section:hover{
+    transform: scale(1.1);
+  }
+  #User{
+    color: teal;
   }
