@@ -46,23 +46,22 @@ console.log("Your Game Has Begun");
 
 
 
-/*
-    const BabyTomagatchi = {
+/* const BabyTomagatchi = {
         tomagatchiName = tomaName,
         age = 0,
         hunger = 0,
         sleepiness = 0,
         boredom = 0
     }
+
 */
 
 $("#tomaNameButton").click(clickName);
 function clickName(){
     const newTomaName = $("#tomaName").val();
     $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
-    console.log(newTomaName);
+    $(".window").remove();
 }
 
-$("button").on("click", function(event){
-    console.warn("gameStart");
-});
+
+
