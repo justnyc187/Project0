@@ -67,7 +67,7 @@ $("#User").click(clickName);
 
 function clickName(){
     const userName = $("#name").val();
-    $(".userName").text(userName);
+    $(".userName").text("My Tomagatchi name is " + userName);
     console.log(userName);
 }
 
