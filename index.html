@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="scripts/app.js" defer></script>
@@ -22,21 +23,22 @@
       <h2>"User Name"</h2>
     </div>
   
-      <div>
-        <h4>Health</h4>
-        <progress id="healthBar" value="0" max="0"></progress>
-        <button type="button">Heal Me!</button>
-      </div>
-      <div>
-        <h4>Boredom</h4>
-        <progress id="boredomBar" value="0" max="0"></progress>
-        <button type="button">Fun!</button>
-      </div>
-      <div>
-        <h4>Sleepiness</h4>
-        <progress id="sleepinessBar" value="0" max="0"></progress>
-        <button type="button">Nap Time!</button>
-      </div>
+    <div>
+      <h4>Health</h4>
+        <progress id="healthBar" value="0" max="100"></progress>
+        <button type="button"><i class="fas fa-hamburger"></i></button>
+    </div>
+    <div>
+      <h4>Boredom</h4>
+        <progress id="boredomBar" value="0" max="100"></progress>
+        <button type="button"><i class="far fa-smile"></i></button>
+    </div>
+    <div>
+      <h4>Sleepiness</h4>
+        <progress id="sleepinessBar" value="0" max="100"></progress>
+        <button type="button"><i class="fas fa-bed"></i></button>
+    </div>
+      
   
 
 

@@ -45,21 +45,19 @@ console.log("Hi Justin");
 
 
 
-//  - User will have to 
-
-/* more details */
-// click "frost" button to increase temp by 10 - event listener
-// temp is < 50 && game timer = 0 User wins
-// if temp is > 50 && game timer = 0 User loses
 
 
 
 
-
-class babyTomagatchi = {
+const babyTomagatchi = {
     name: "",
     age: 0,
-    boredom: 0
+    hunger: 0,
+    boredom: 0,
+    sleepiness: 0,
+    start(event){
+        console.log("Game has begun");
+    }
 
 }
 

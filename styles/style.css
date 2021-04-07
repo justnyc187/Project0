@@ -1,4 +1,8 @@
+h1{
+    position: relative;
+}
 h2 {
+    position: relative;
     text-align: center;
   }
   
@@ -8,24 +12,43 @@ h2 {
   }
   h4 {
     color: teal;
+    
   }
-  
   .window{
     padding: 50px;
     border: 10px solid lightblue;
     color: teal;
     border-radius: 20px;
+    position: relative;
+    max-block-size: 50%;
     
   }
   section {
     background: lightblue;
     position: relative;
-    margin: 10px 350px 0px 400px;
+    margin: 18px 400px 0px 400px;
     cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  
   }
   section:hover{
     transform: scale(1.1);
   }
   #User{
     color: teal;
+    position: relative;
   }
+
+  i {
+    font-size: 20px;
+    color: teal;
+  }
+  body {
+    background-color:##f5faee;
+  }
+  
+  
