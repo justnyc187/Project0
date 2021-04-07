@@ -32,8 +32,6 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-  
   }
   section:hover{
     transform: scale(1.1);
@@ -48,7 +46,16 @@ h2 {
     color: teal;
   }
   body {
-    background-color:##f5faee;
+    background-color:#f5faee;
   }
-  
+   .babyTomoImg{
+    width: 10%;
+    height: 10%;
+    top: -20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+   }
   
