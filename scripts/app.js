@@ -1,4 +1,5 @@
-console.log("Hi Justin");                    
+console.log("Hi Justin");
+console.log("Your Game Has Begun");                    
                     
                     // M.V.P
 
@@ -60,5 +61,16 @@ const babyTomagatchi = {
     }
 
 }
+// const $divEl = $(".userName");
 
+$("#User").click(clickName);
+
+function clickName(){
+    const userName = $("#name").val();
+    $(".userName").text(userName);
+    console.log(userName);
+}
+
+//event listener onClick to change to user name input
+// console.log($divEl);
 

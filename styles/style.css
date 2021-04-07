@@ -34,7 +34,7 @@ h2 {
     justify-content: center;
   }
   section:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   #User{
     color: teal;
@@ -55,7 +55,12 @@ h2 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    
-   }
+    border-radius: 55px;
+  }
+
+  .userName{
+    color: teal;
+  }
+
+  
   
