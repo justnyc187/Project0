@@ -38,7 +38,7 @@ h2 {
   section:hover{
     transform: scale(1.05);
   }
-  #User{
+  #tomaNameButton{
     color: teal;
     position: relative;
   }
@@ -60,7 +60,7 @@ h2 {
     border-radius: 55px;
   }
 
-  .userName{
+  .newTomaName{
     color: teal;
     text-align: center;
     margin-top: 50px;
