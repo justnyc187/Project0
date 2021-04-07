@@ -47,30 +47,40 @@ console.log("Your Game Has Begun");
 
 
 
-
-
-
-const babyTomagatchi = {
-    name: "",
-    age: 0,
-    hunger: 0,
-    boredom: 0,
-    sleepiness: 0,
-    start(event){
-        console.log("Game has begun");
+ class Tomagatchi {
+    constructor (tomaName){
+        this.name = tomaName;
+        this.age = 0;
+        this.hunger = 0;
+        this.sleepiness = 0;
+        this.boredom = 0;
     }
+    setTimer(prop, duration){
+        setInterval(prop, duration)
+    }
+    addTime(amount){
+        amount = amount + 1;
+    }
+    ageIncrease(){
+        this.setTimer(this.addTime(this.hunger), 5000)
+    }
+    hungIncrease(){
+        this.setTimer(this.addTime(this.sleepiness), 7000)
+    }
+    boreIncrease(){
+        this.setTimer(this.addTime(this.boredom), 4000)
+    }
+    
+ }
+ 
 
-}
+
 // const $divEl = $(".userName");
-
 $("#User").click(clickName);
-
 function clickName(){
     const userName = $("#name").val();
     $(".userName").text("My Tomagatchi name is " + userName);
     console.log(userName);
 }
 
-//event listener onClick to change to user name input
-// console.log($divEl);
-
+ 
