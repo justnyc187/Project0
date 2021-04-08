@@ -1,17 +1,17 @@
 console.log("Hi Justin");
-console.log("Your Game Has Begun");                    
-                    
-                    // M.V.P
+console.log("Your Game Has Begun");
+
+// M.V.P
 
 // MISSION - "keep tomagotchi alive"
 
 // User Story
-                    // UI 1
+// UI 1
 // Opening UI will have a box with a name input 
 // User types in name in the opening "name" window and pushes the click button and game begins
 
 
-/* more details */ 
+/* more details */
 // When User types in name and hits click button it will trigger a multitude of event listeners
 
 
@@ -22,7 +22,7 @@ console.log("Your Game Has Begun");
 // Sleepiness timer/bar with increase ++1 every 7000ms - if sleepiness reaches 10 tomagatchi will die
 // Age timer will start at a default of 120,000ms and decrease by 1000ms - if tomagatchi is still alive after 120,000 - baby tomagatchi will spawn into nigger tomagatchi
 
-                    // UI Section 2
+// UI Section 2
 // User will see a page with Users "name" displayed
 // the tomagatchi
 // Sleepiness bar 
@@ -46,51 +46,106 @@ console.log("Your Game Has Begun");
 
 
 
- const BabyTomagatchi = {
-        name: null,
-        age: 0,
-        hunger: 0,
-        sleepiness: 0,
-        boredom: 0,
-        clickName(){
-            const newTomaName = $("#tomaName").val();
-            $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
-            $(".window").remove();
-        },
-        increaseBoredom(){
-            if (BabyTomagatchi.boredom < 10){
-                BabyTomagatchi.boredom++;
-                console.log("Please Work");
-                $("#healthBar").text(BabyTomagatchi.boredom);
-            }
-        },
-            increaseSleepiness(){
-                if (BabyTomagatchi.sleepiness < 10){
-                    BabyTomagatchi.sleepiness++;
-                    console.log("Go to sleep");
-                    $("#sleepinessBar").text(BabyTomagatchi.sleepiness);
-            }
-        },
-                increaseHunger(){
-                    if (BabyTomagatchi.hunger < 10){
-                        BabyTomagatchi.hunger++;
-                        console.log("Please Dont be Hungry");
-                        $("#hungerBar").text(BabyTomagatchi.hunger);
-                    }
-        // start here and add the inreaseSleepiness function + increaseHunger functions
+const BabyTomagatchi = {
+    name: null,
+    age: 0,
+    hunger: 0,
+    sleepiness: 0,
+    boredom: 0,
+    clickName() {
+        const newTomaName = $("#tomaName").val();
+        $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
+        $(".window").remove();
+        BabyTomagatchi.increaseBoredom();
+        BabyTomagatchi.Boredomtimer = window.setInterval(BabyTomagatchi.increaseBoredom, 5000,);
+        BabyTomagatchi.Hungertimer = window.setInterval(BabyTomagatchi.increaseHunger, 4000,);
+        BabyTomagatchi.Sleepinesstimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 3000,);
+        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseAge, 3000,);
+        BabyTomagatchi.animateTomagatchi();
+    },
+    decreaseBoredom() {
+        if (BabyTomagatchi.boredom < 10) {
+            BabyTomagatchi.boredom--;
+            console.log("Please Work");
+            $("#boredomBar").val(BabyTomagatchi.boredom);
         }
+    },
+    decreaseSleepiness() {
+        if (BabyTomagatchi.sleepiness < 10) {
+            BabyTomagatchi.sleepiness--;
+            console.log(BabyTomagatchi.sleepiness);
+            console.log("Go to sleep");
+            $("#sleepinessBar").val(BabyTomagatchi.sleepiness);
+        }
+    },
+    decreaseHunger() {
+        if (BabyTomagatchi.hunger < 10) {
+            BabyTomagatchi.hunger--;
+            console.log("Please Dont be Hungry");
+            $("#healthBar").val(BabyTomagatchi.hunger);
+
+        }
+
+    },
+    increaseBoredom() {
+        BabyTomagatchi.boredom++;
+        $("#boredomBar").val(BabyTomagatchi.boredom);
+        console.log("increase Boredom")
+
+    },
+    increaseHunger() {
+        BabyTomagatchi.hunger++;
+        $("#healthBar").val(BabyTomagatchi.hunger);
+        console.log("increase hunger")
+    },
+    increaseSleepiness() {
+        BabyTomagatchi.sleepiness++;
+        $("#sleepinessBar").val(BabyTomagatchi.sleepiness);
+        console.log("increase sleepiness")
+
+    },
+    increaseAge() {
+        BabyTomagatchi.age++;
+        $("#gameBar").val(BabyTomagatchi.age);
+        console.log("increase sleepiness")
+    },
+
+    animateTomagatchi() {
+        var width = 500;
+        console.log("Walk");
+    
+        function goRight() {
+            // start if statements and stop with a return
+            $(".babyTomaImg").animate({
+            left: 400
+          }, 5000, function() {
+              
+             setTimeout(goLeft, 50);
+          }) .css({
+              transform: "scaleX(1)"
+          })
+          ;
+        }
+        function goLeft() {
+            // start if statements and stop with return value
+            $(".babyTomaImg").animate({
+            left: -300
+          }, 5000, function() {
+              
+             setTimeout(goRight, 50);
+          }) .css({
+            transform: "scaleX(-1)"
+          })
+          ;
+        }
+    
+        setTimeout(goRight, 50);
     }
 
-$("#tomaNameButton").on("click", BabyTomagatchi.clickName);
-$("#Boredom-button").on("click", BabyTomagatchi.increaseBoredom);
-$("#Sleepiness-button").on("click", BabyTomagatchi.increaseSleepiness);
-$("#Hunger-button").on("click", BabyTomagatchi.increaseHunger);
-
-
-
-/*    clickName(){
-    const newTomaName = $("#tomaName").val();
-    $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
-    $(".window").remove();
 }
-*/
+
+
+$("#tomaNameButton").on("click", BabyTomagatchi.clickName);
+$("#Boredom-button").on("click", BabyTomagatchi.decreaseBoredom);
+$("#Sleepiness-button").on("click", BabyTomagatchi.decreaseSleepiness);
+$("#Hunger-button").on("click", BabyTomagatchi.decreaseHunger);

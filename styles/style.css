@@ -60,7 +60,7 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 55px;
-    
+    position: relative;
   }
 
   .newTomaName{
@@ -69,6 +69,6 @@ text-align: center;
 margin-top: 50px;
 font-size: 30px;
 font-family: 'New Tegomin', serif;
-  }
+ }
 
   
