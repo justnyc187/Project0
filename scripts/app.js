@@ -57,11 +57,12 @@ const BabyTomagatchi = {
         $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
         $(".window").remove();
         BabyTomagatchi.increaseBoredom();
-        BabyTomagatchi.Boredomtimer = window.setInterval(BabyTomagatchi.increaseBoredom, 5000,);
-        BabyTomagatchi.Hungertimer = window.setInterval(BabyTomagatchi.increaseHunger, 4000,);
-        BabyTomagatchi.Sleepinesstimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 3000,);
+        BabyTomagatchi.Boredomtimer = window.setInterval(BabyTomagatchi.increaseBoredom, 1000,);
+        BabyTomagatchi.Hungertimer = window.setInterval(BabyTomagatchi.increaseHunger, 1000,);
+        BabyTomagatchi.Sleepinesstimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 1000,);
         BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseAge, 3000,);
         BabyTomagatchi.animateTomagatchi();
+        
     },
     decreaseBoredom() {
         if (BabyTomagatchi.boredom < 10) {
@@ -116,6 +117,15 @@ const BabyTomagatchi = {
     
         function goRight() {
             // start if statements and stop with a return
+            if(BabyTomagatchi.hunger >= 10){
+                return;
+            }
+            if(BabyTomagatchi.boredom >= 10){
+                return;
+            }
+            if(BabyTomagatchi.sleepiness >= 10){
+                return;
+            }
             $(".babyTomaImg").animate({
             left: 400
           }, 5000, function() {
@@ -127,7 +137,15 @@ const BabyTomagatchi = {
           ;
         }
         function goLeft() {
-            // start if statements and stop with return value
+            if(BabyTomagatchi.hunger >= 10){
+                return;
+            }
+            if(BabyTomagatchi.boredom >= 10){
+                return;
+            }
+            if(BabyTomagatchi.sleepiness >= 10){
+                return;
+            }
             $(".babyTomaImg").animate({
             left: -300
           }, 5000, function() {
