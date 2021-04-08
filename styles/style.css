@@ -63,7 +63,7 @@ h4 {
     position: relative;
   }
 
-  .newTomaName{
+  .newTomaName {
 color: teal;
 text-align: center;
 margin-top: 50px;
@@ -71,4 +71,9 @@ font-size: 30px;
 font-family: 'New Tegomin', serif;
  }
 
-  
+ .endGame {
+   text-align: center;
+   padding-bottom: 150px;
+   color: teal;
+   font-size: 75px;
+}

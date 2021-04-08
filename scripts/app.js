@@ -118,13 +118,14 @@ const BabyTomagatchi = {
         function goRight() {
             // start if statements and stop with a return
             if(BabyTomagatchi.hunger >= 10){
-                return;
+                return $(".endGame").text(`So Sorry, your Tomagatchi has died`);
+                // return $(".endGame").text(`So Sorry ${newTomaName}, your Tomagatchi has died`);
             }
             if(BabyTomagatchi.boredom >= 10){
-                return;
+                return $(".endGame").text(`So Sorry, your Tomagatchi has died`);
             }
             if(BabyTomagatchi.sleepiness >= 10){
-                return;
+                return $(".endGame").text(`So Sorry, your Tomagatchi has died`);
             }
             $(".babyTomaImg").animate({
             left: 400
@@ -138,13 +139,13 @@ const BabyTomagatchi = {
         }
         function goLeft() {
             if(BabyTomagatchi.hunger >= 10){
-                return;
+                return $(".endGame").text(`So Sorry, your Tomagatchi has died`);
             }
             if(BabyTomagatchi.boredom >= 10){
-                return;
+                return$(".endGame").text(`So Sorry, your Tomagatchi has died`);
             }
             if(BabyTomagatchi.sleepiness >= 10){
-                return;
+                return$(".endGame").text(`So Sorry, your Tomagatchi has died`);
             }
             $(".babyTomaImg").animate({
             left: -300
