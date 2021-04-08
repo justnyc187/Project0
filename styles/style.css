@@ -4,14 +4,13 @@ h1{
 }
 h2 {
     position: relative;
-    text-align: center;
-  }
+}
   
-  p {
-    text-align: center;
+p {
+  text-align: center;
     
-  }
-  h4 {
+}
+h4 {
     color: teal;
     font-family: 'New Tegomin', serif;
     
@@ -34,13 +33,16 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: skew(-10deg);
+    
   }
   section:hover{
     transform: scale(1.05);
   }
+
   #tomaNameButton{
-    color: teal;
-    position: relative;
+  color: teal;
+  position: relative;
   }
 
   i {
@@ -50,7 +52,7 @@ h2 {
   body {
     background-color:#f5faee;
   }
-   .babyTomoImg{
+   .babyTomaImg{
     width: 10%;
     height: 10%;
     top: -20px;
@@ -58,15 +60,15 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 55px;
+    
   }
 
   .newTomaName{
-    color: teal;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 30px;
-    font-family: 'New Tegomin', serif;
+color: teal;
+text-align: center;
+margin-top: 50px;
+font-size: 30px;
+font-family: 'New Tegomin', serif;
   }
 
-  
   

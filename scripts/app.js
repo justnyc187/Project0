@@ -46,22 +46,51 @@ console.log("Your Game Has Begun");
 
 
 
-/* const BabyTomagatchi = {
-        tomagatchiName = tomaName,
-        age = 0,
-        hunger = 0,
-        sleepiness = 0,
-        boredom = 0
+ const BabyTomagatchi = {
+        name: null,
+        age: 0,
+        hunger: 0,
+        sleepiness: 0,
+        boredom: 0,
+        clickName(){
+            const newTomaName = $("#tomaName").val();
+            $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
+            $(".window").remove();
+        },
+        increaseBoredom(){
+            if (BabyTomagatchi.boredom < 10){
+                BabyTomagatchi.boredom++;
+                console.log("Please Work");
+                $("#healthBar").text(BabyTomagatchi.boredom);
+            }
+        },
+            increaseSleepiness(){
+                if (BabyTomagatchi.sleepiness < 10){
+                    BabyTomagatchi.sleepiness++;
+                    console.log("Go to sleep");
+                    $("#sleepinessBar").text(BabyTomagatchi.sleepiness);
+            }
+        },
+                increaseHunger(){
+                    if (BabyTomagatchi.hunger < 10){
+                        BabyTomagatchi.hunger++;
+                        console.log("Please Dont be Hungry");
+                        $("#hungerBar").text(BabyTomagatchi.hunger);
+                    }
+        // start here and add the inreaseSleepiness function + increaseHunger functions
+        }
     }
 
-*/
+$("#tomaNameButton").on("click", BabyTomagatchi.clickName);
+$("#Boredom-button").on("click", BabyTomagatchi.increaseBoredom);
+$("#Sleepiness-button").on("click", BabyTomagatchi.increaseSleepiness);
+$("#Hunger-button").on("click", BabyTomagatchi.increaseHunger);
 
-$("#tomaNameButton").click(clickName);
-function clickName(){
+
+
+/*    clickName(){
     const newTomaName = $("#tomaName").val();
     $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
     $(".window").remove();
 }
-
-
-
+*/
