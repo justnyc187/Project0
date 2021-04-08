@@ -63,6 +63,7 @@ const BabyTomagatchi = {
         BabyTomagatchi.Sleepinesstimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 4000);
         BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 500);
         BabyTomagatchi.animateTomagatchi();
+        BabyTomagatchi.increaseAge();
         
     },
     decreaseBoredom() {
@@ -89,11 +90,11 @@ const BabyTomagatchi = {
         }
 
     },
+    // CANT GET THIS TO WORK
     increaseTimer(){
         BabyTomagatchi.timer++;
         $("#gameBar").val(BabyTomagatchi.timer);
         console.log("Work you shithead")
-
     },
     increaseBoredom() {
         BabyTomagatchi.boredom++;
@@ -110,12 +111,13 @@ const BabyTomagatchi = {
         BabyTomagatchi.sleepiness++;
         $("#sleepinessBar").val(BabyTomagatchi.sleepiness);
         console.log("increase sleepiness")
-
     },
+    // Got function to work but cant get conditional to work
     increaseAge() {
+        if(BabyTomagatchi.timer >= 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10)
         BabyTomagatchi.age++;
-        $(".tomaAge").val(BabyTomagatchi.age);
-        console.log("increase sleepiness");
+        return $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, Good Luck with that`);
+
     },
 
     animateTomagatchi() {
