@@ -1,4 +1,32 @@
-                    
+
+
+                                            TOMA WORLD MISSION
+    You begin in Toma World as a young baby dinosaur and with just the right amount of sleep, food and play, you just might make it to your first birthday, and spawn into a bigger dinosaur. You will have to make sure your hunger, sleepiness and boredom leves dont get too high, or else you will die!
+    Take care of your Toma as if they were your own child, and maybe you will get to see them grow.
+
+                                                APPROACH
+    Since I am a father of a 4 year old little girl, I approached this project with her in mind, and wanted to create a game that my daughter would; A. have fun playing, B. have the attention span to play, C. be able to play with easy functionality.
+
+    - created a playful easy ui that would be inviting for the younger age range
+    - The game has only 4 buttons so as not to overwhlem younger kids, and make it a game that they could play on their own if need be
+    - The length of game can be decided by changing intervals but I wanted to keep it fairly short because as we all know kids have a very short attention span
+
+                                                Specifications
+    - Enter your name, Name is entered into text and displayed on page and game begins
+    - On game begin the Hunger, Sleepiness, Boredom levels, as well as game timer will all increase on games start
+    - you must click the buttons associated with each meter in order to decrease the values and keep your tomagatchi alive
+    - If the game timer has completed and your Tomagatchi's Hunger, Sleepiness and Boredom levels are all below the limit, then you have succeeded in keeping your Tomagatchi alive, it will increase in age and spawn into a beatiful new creature
+
+                                                PROPERTIES
+    - Name 
+    - Age
+    - Hunger
+    - Boredom
+    - Sleepiness
+    - Timer
+
+
+
                          
                     
                     
@@ -21,7 +49,7 @@
 
 
 /* click button event listeners on game begin */
-// name will be appended to the second section of the UI 
+// name will be appended to the second section of the UI
 // Hunger timer/bar will increase ++1 every 5000ms - if hunger reaches 10 tomagatchi will die
 // Boredom timer/bar will increase ++1 every 4000ms - if boredom reaches 10 tomagatchi will die
 // Sleepiness timer/bar with increase ++1 every 7000ms - if sleepiness reaches 10 tomagatchi will die

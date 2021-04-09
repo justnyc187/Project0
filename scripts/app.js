@@ -58,11 +58,11 @@ const BabyTomagatchi = {
         $(".newTomaName").text(`My Tomagatchi name is ${BabyTomagatchi.name}`);
         $(".window").remove();
         BabyTomagatchi.increaseBoredom();
-        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 1000);
+        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 3000);
         console.log("What are you doing?", BabyTomagatchi.timer);
-        BabyTomagatchi.hungerTimer = window.setInterval(BabyTomagatchi.increaseHunger, 1000);
-        BabyTomagatchi.sleepinessTimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 1000);
-        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 200);
+        BabyTomagatchi.hungerTimer = window.setInterval(BabyTomagatchi.increaseHunger, 3000);
+        BabyTomagatchi.sleepinessTimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 3000);
+        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 100);
         BabyTomagatchi.animateTomagatchi();
         BabyTomagatchi.increaseAge();
         
@@ -107,7 +107,7 @@ const BabyTomagatchi = {
         if(BabyTomagatchi.timer === 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10){
         BabyTomagatchi.age++
         $("#tomaAge").text(` Age: ${BabyTomagatchi.age}`);
-        $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, and is this Good Luck with that`).append(`<img class="babyTomaImg" src="https://i.pinimg.com/236x/f1/12/02/f11202db2143fb61969aed75ad2a0e1f.jpg" alt="baby tomagatchi">`);
+        $(".tomaSpawn").text(`Your Tomagatchi has now Spawned into this, Good Luck with that`).append(`<img class="babyTomaImg" src="https://i.pinimg.com/236x/f1/12/02/f11202db2143fb61969aed75ad2a0e1f.jpg" alt="baby tomagatchi">`);
         }
     },
     // Is this a weird way to do it????? Only thing i could get to work
