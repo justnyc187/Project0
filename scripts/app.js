@@ -58,7 +58,7 @@ const BabyTomagatchi = {
         $(".newTomaName").text(`My Tomagatchi name is ${BabyTomagatchi.name}`);
         $(".window").remove();
         BabyTomagatchi.increaseBoredom();
-        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 2000);
+        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 1000);
         BabyTomagatchi.hungerTimer = window.setInterval(BabyTomagatchi.increaseHunger, 2000);
         BabyTomagatchi.sleepinessTimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 2000);
         BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 100);
@@ -176,8 +176,7 @@ const BabyTomagatchi = {
             $(".babyTomaImg").animate({
             left: 400
           }, 5000, function() {
-              
-             setTimeout(goLeft, 50);
+              setTimeout(goLeft, 50);
           }) .css({
               transform: "scaleX(1)"
           })
@@ -195,8 +194,7 @@ const BabyTomagatchi = {
             }
             $(".babyTomaImg").animate({
             left: -300
-          }, 5000, function() {
-            
+        }, 5000, function() {
             setTimeout(goRight, 50);
           }) .css({
             transform: "scaleX(-1)"

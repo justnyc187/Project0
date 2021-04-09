@@ -1,7 +1,6 @@
 
-
                                             TOMA WORLD MISSION
-    You begin in Toma World as a young baby dinosaur and with just the right amount of sleep, food and play, you just might make it to your first birthday, and spawn into a bigger dinosaur. You will have to make sure your hunger, sleepiness and boredom leves dont get too high, or else you will die!
+    You begin in Toma World as a young baby dinosaur and with just the right amount of sleep, food and play, you might make it to your first birthday, and spawn into a bigger dinosaur. You will have to make sure your hunger, sleepiness and boredom leves dont get too high, or else you will die!
     Take care of your Toma as if they were your own child, and maybe you will get to see them grow into another little monster.
 
                                                 APPROACH
@@ -23,20 +22,25 @@
     - Hunger
     - Boredom
     - Sleepiness
-    - Timer
+    - Spawn Timer
+    
+
+!![IMG_4274](https://media.git.generalassemb.ly/user/35204/files/8b53c380-992e-11eb-9f6c-393308c7b22f)
+!![IMG_4273](https://media.git.generalassemb.ly/user/35204/files/8c84f080-992e-11eb-9312-0b180cd22e94)
 
 
 
 
 
-                         
-                    
-                    
-                    
-                    
-                    
-                    
-                    // M.V.P
+
+
+
+
+
+
+    
+    
+                                                // M.V.P
 
 // MISSION - "keep tomagotchi alive"
 
@@ -57,7 +61,8 @@
 // Sleepiness timer/bar with increase ++1 every 7000ms - if sleepiness reaches 10 tomagatchi will die
 // Age timer will start at a default of 120,000ms and decrease by 1000ms - if tomagatchi is still alive after 120,000 - baby tomagatchi will spawn into nigger tomagatchi
 
-                    // UI Section 2
+                                            
+                                            // UI Section 2
 // User will see a page with Users "name" displayed
 // the tomagatchi
 // Sleepiness bar 
