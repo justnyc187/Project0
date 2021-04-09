@@ -19,7 +19,7 @@ h4 {
     padding: 50px;
     border: 10px solid lightblue;
     color: teal;
-    border-radius: 20px;
+    border-radius: 15px;
     position: relative;
     max-block-size: 50%;
     
@@ -33,11 +33,9 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: skew(-10deg);
-    
   }
   section:hover{
-    transform: scale(1.05);
+    border-radius: 50%;
   }
 
   #tomaNameButton{
@@ -78,3 +76,4 @@ font-family: 'New Tegomin', serif;
    font-size: 60px;
    font-family: 'New Tegomin', serif;
 }
+.
