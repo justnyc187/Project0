@@ -2,7 +2,7 @@
 
                                             TOMA WORLD MISSION
     You begin in Toma World as a young baby dinosaur and with just the right amount of sleep, food and play, you just might make it to your first birthday, and spawn into a bigger dinosaur. You will have to make sure your hunger, sleepiness and boredom leves dont get too high, or else you will die!
-    Take care of your Toma as if they were your own child, and maybe you will get to see them grow.
+    Take care of your Toma as if they were your own child, and maybe you will get to see them grow into another little monster.
 
                                                 APPROACH
     Since I am a father of a 4 year old little girl, I approached this project with her in mind, and wanted to create a game that my daughter would; A. have fun playing, B. have the attention span to play, C. be able to play with easy functionality.
@@ -24,6 +24,8 @@
     - Boredom
     - Sleepiness
     - Timer
+
+
 
 
 
