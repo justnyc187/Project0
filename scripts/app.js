@@ -57,11 +57,10 @@ const BabyTomagatchi = {
         BabyTomagatchi.name = $("#tomaName").val();
         $(".newTomaName").text(`My Tomagatchi name is ${BabyTomagatchi.name}`);
         $(".window").remove();
-        BabyTomagatchi.increaseBoredom();
-        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 1000);
-        BabyTomagatchi.hungerTimer = window.setInterval(BabyTomagatchi.increaseHunger, 2000);
-        BabyTomagatchi.sleepinessTimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 2000);
-        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 100);
+        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 2222);
+        BabyTomagatchi.hungerTimer = window.setInterval(BabyTomagatchi.increaseHunger, 2222);
+        BabyTomagatchi.sleepinessTimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 2222);
+        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 5000);
         BabyTomagatchi.animateTomagatchi();
         BabyTomagatchi.increaseAge();
         
@@ -86,9 +85,7 @@ const BabyTomagatchi = {
             BabyTomagatchi.hunger--;
             console.log("Please Dont be Hungry");
             $("#healthBar").val(BabyTomagatchi.hunger);
-
         }
-
     },
     increaseTimer(){
         if(BabyTomagatchi.hunger >= 10){
@@ -120,9 +117,7 @@ const BabyTomagatchi = {
     }
         BabyTomagatchi.boredom++;
         $("#boredomBar").val(BabyTomagatchi.boredom);
-        
         console.log("increase Boredom")
-    
     },
     increaseHunger(){ 
         if(BabyTomagatchi.timer > 100){
@@ -173,14 +168,7 @@ const BabyTomagatchi = {
             if(BabyTomagatchi.sleepiness >= 10){
                 return $(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died Sleepiness`);
             }
-            $(".babyTomaImg").animate({
-            left: 400
-          }, 5000, function() {
-              setTimeout(goLeft, 50);
-          }) .css({
-              transform: "scaleX(1)"
-          })
-          ;
+            $(".babyTomaImg").animate({left: 400}, 5000, function() {setTimeout(goLeft, 50);}) .css({transform: "scaleX(1)"});
         }
         function goLeft() {
             if(BabyTomagatchi.hunger >= 10){
@@ -192,16 +180,8 @@ const BabyTomagatchi = {
             if(BabyTomagatchi.sleepiness >= 10){
                 return$(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died of Sleepiness`);
             }
-            $(".babyTomaImg").animate({
-            left: -300
-        }, 5000, function() {
-            setTimeout(goRight, 50);
-          }) .css({
-            transform: "scaleX(-1)"
-          })
-          ;
+            $(".babyTomaImg").animate({left: -300}, 5000, function() {setTimeout(goRight, 50);}) .css({transform: "scaleX(-1)"});
         }
-    
         setTimeout(goRight, 50); 
     }
 
