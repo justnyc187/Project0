@@ -107,7 +107,7 @@ const BabyTomagatchi = {
         if(BabyTomagatchi.timer === 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10){
         BabyTomagatchi.age++
         $("#tomaAge").text(` Age: ${BabyTomagatchi.age}`);
-        $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, and is this Good Luck with that`).append(`<img class="babyTomaImg" src="https://i.pinimg.com/564x/ad/2f/ac/ad2fac9d368d7975c7d2606614a0cbcd.jpg" alt="baby tomagatchi">`);
+        $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, and is this Good Luck with that`).append(`<img class="babyTomaImg" src="https://i.pinimg.com/236x/f1/12/02/f11202db2143fb61969aed75ad2a0e1f.jpg" alt="baby tomagatchi">`);
         }
     },
     // Is this a weird way to do it????? Only thing i could get to work
