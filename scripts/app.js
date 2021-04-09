@@ -54,14 +54,15 @@ const BabyTomagatchi = {
     boredom: 0,
     timer: 0,
     clickName() {
-        const newTomaName = $("#tomaName").val();
-        $(".newTomaName").text(`My Tomagatchi name is ${newTomaName}`);
+        BabyTomagatchi.name = $("#tomaName").val();
+        $(".newTomaName").text(`My Tomagatchi name is ${BabyTomagatchi.name}`);
         $(".window").remove();
         BabyTomagatchi.increaseBoredom();
-        BabyTomagatchi.timer = window.setInterval(BabyTomagatchi.increaseBoredom, 3000);
-        BabyTomagatchi.hunger = window.setInterval(BabyTomagatchi.increaseHunger, 2500);
-        BabyTomagatchi.sleepiness = window.setInterval(BabyTomagatchi.increaseSleepiness, 1200);
-        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 500);
+        BabyTomagatchi.boredomTimer = window.setInterval(BabyTomagatchi.increaseBoredom, 1000);
+        console.log("What are you doing?", BabyTomagatchi.timer);
+        BabyTomagatchi.hungerTimer = window.setInterval(BabyTomagatchi.increaseHunger, 1000);
+        BabyTomagatchi.sleepinessTimer = window.setInterval(BabyTomagatchi.increaseSleepiness, 1000);
+        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 200);
         BabyTomagatchi.animateTomagatchi();
         BabyTomagatchi.increaseAge();
         
@@ -104,7 +105,9 @@ const BabyTomagatchi = {
         BabyTomagatchi.timer++;
         $("#gameBar").val(BabyTomagatchi.timer);
         if(BabyTomagatchi.timer === 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10){
-        return $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, Good Luck with that`);
+        BabyTomagatchi.age++
+        $("#tomaAge").text(` Age: ${BabyTomagatchi.age}`);
+        $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, and is this Good Luck with that`).append(`<img class="babyTomaImg" src="https://i.pinimg.com/564x/ad/2f/ac/ad2fac9d368d7975c7d2606614a0cbcd.jpg" alt="baby tomagatchi">`);
         }
     },
     // Is this a weird way to do it????? Only thing i could get to work
@@ -159,7 +162,7 @@ const BabyTomagatchi = {
         console.log("Is this WORKING YET?????");
         if(BabyTomagatchi.timer === 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10) {
         BabyTomagatchi.age++;
-        //return $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, Good Luck with that`);
+        
         }
     },
     animateTomagatchi() {
@@ -169,14 +172,14 @@ const BabyTomagatchi = {
         function goRight() {
             // start if statements and stop with a return
             if(BabyTomagatchi.hunger >= 10){
-                return $(".endGame").text(`So Sorry, your Tomagatchi has died of hunger`);
+                return $(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died of hunger`);
                 // return $(".endGame").text(`So Sorry ${newTomaName}, your Tomagatchi has died`);
             }
             if(BabyTomagatchi.boredom >= 10){
-                return $(".endGame").text(`So Sorry, your Tomagatchi has died of Boredom`);
+                return $(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died of Boredom`);
             }
             if(BabyTomagatchi.sleepiness >= 10){
-                return $(".endGame").text(`So Sorry, your Tomagatchi has died Sleepiness`);
+                return $(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died Sleepiness`);
             }
             $(".babyTomaImg").animate({
             left: 400
@@ -190,13 +193,13 @@ const BabyTomagatchi = {
         }
         function goLeft() {
             if(BabyTomagatchi.hunger >= 10){
-                return $(".endGame").text(`So Sorry, your Tomagatchi has died of Hunger`);
+                return $(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died of Hunger`);
             }
             if(BabyTomagatchi.boredom >= 10){
-                return$(".endGame").text(`So Sorry, your Tomagatchi has died of Boredom`);
+                return$(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died of Boredom`);
             }
             if(BabyTomagatchi.sleepiness >= 10){
-                return$(".endGame").text(`So Sorry, your Tomagatchi has died of Sleepiness`);
+                return$(".endGame").text(`So Sorry ${BabyTomagatchi.name}, your Tomagatchi has died of Sleepiness`);
             }
             $(".babyTomaImg").animate({
             left: -300
