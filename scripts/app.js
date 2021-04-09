@@ -60,8 +60,8 @@ const BabyTomagatchi = {
         BabyTomagatchi.increaseBoredom();
         BabyTomagatchi.timer = window.setInterval(BabyTomagatchi.increaseBoredom, 3000);
         BabyTomagatchi.hunger = window.setInterval(BabyTomagatchi.increaseHunger, 2500);
-        BabyTomagatchi.sleepiness = window.setInterval(BabyTomagatchi.increaseSleepiness, 4000);
-        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 100);
+        BabyTomagatchi.sleepiness = window.setInterval(BabyTomagatchi.increaseSleepiness, 1200);
+        BabyTomagatchi.GameTimer = window.setInterval(BabyTomagatchi.increaseTimer, 500);
         BabyTomagatchi.animateTomagatchi();
         BabyTomagatchi.increaseAge();
         
@@ -92,6 +92,15 @@ const BabyTomagatchi = {
     },
 
     increaseTimer(){
+        if(BabyTomagatchi.hunger >= 10){
+            return;
+        }
+        if(BabyTomagatchi.sleepiness >= 10){
+            return;
+        }
+        if(BabyTomagatchi.boredom >= 10){
+            return;
+        }
         BabyTomagatchi.timer++;
         $("#gameBar").val(BabyTomagatchi.timer);
         if(BabyTomagatchi.timer === 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10){
@@ -103,14 +112,26 @@ const BabyTomagatchi = {
         if(BabyTomagatchi.timer > 100){
         return;
     }
+    if(BabyTomagatchi.hunger >= 10){
+        return;
+    }
+    if(BabyTomagatchi.sleepiness >= 10){
+        return;
+    }
         BabyTomagatchi.boredom++;
         $("#boredomBar").val(BabyTomagatchi.boredom);
         // Why wont this work
         console.log("increase Boredom")
-
+    
     },
     increaseHunger(){ 
         if(BabyTomagatchi.timer > 100){
+        return;
+    }
+    if(BabyTomagatchi.sleepiness >= 10){
+        return;
+    }
+    if(BabyTomagatchi.boredom >= 10){
         return;
     }
         BabyTomagatchi.hunger++;
@@ -121,6 +142,12 @@ const BabyTomagatchi = {
         if(BabyTomagatchi.timer > 100){
             return;
         }
+        if(BabyTomagatchi.boredom >= 10){
+            return;
+        }
+        if(BabyTomagatchi.hunger >= 10){
+            return;
+        }
         BabyTomagatchi.sleepiness++;
         $("#sleepinessBar").val(BabyTomagatchi.sleepiness);
         console.log("increase sleepiness")
@@ -129,7 +156,7 @@ const BabyTomagatchi = {
     //
     //
     increaseAge() {
-        console.log("Is this WORKING?????");
+        console.log("Is this WORKING YET?????");
         if(BabyTomagatchi.timer === 100 && BabyTomagatchi.hunger < 10 && BabyTomagatchi.boredom < 10 && BabyTomagatchi.sleepiness < 10) {
         BabyTomagatchi.age++;
         //return $(".tomaSpawn").text(`Your Tomagatchi has now Spawned, Good Luck with that`);
